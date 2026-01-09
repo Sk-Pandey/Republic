@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+    }
+
+    p {
+      font-family: "Playfair Display", serif;
+    }
+    input,textarea{
+      font-weight: 600;
+      font-variant: small-caps;
+    }
+    
+  </style>
+  </head>
+
+  <!-- 
+  Saffron: #FF9933 (highlights, buttons)
+
+White: #FFFFFF (background)
+
+Green: #138808 (icons, accents)
+
+Navy Blue: #000080 (Ashoka Chakra, headings)
+  -->
+
+  <body class="text-[#000080]">
+    <!-- Header Start here...... -->
+    <header
+      class="h-20 flex justify-around items-center shadow-md sticky top-0 bg-white">
+      <div class="logo lg:w-[50%] flex items-center md:gap-6 gap-2 sm:pl-6">
+        <img class="h-16 md:h-20" src="images/logo.png" alt="IN-flag" />
+        <h1 class="text-xl lg:text-2xl font-bold">HAPPY REPUBLIC DAY</h1>
+      </div>
+
+      <nav class="text-xl font-bold lg:w-[50%]">
+        <ul class="hidden md:flex justify-around ">
+          <li
+            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
+              href="#Home">Home</a></li>
+          <li
+            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
+              href="#About">About</a></li>
+          <li
+            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
+              href="#Leaders">Leaders</a>
+          </li>
+          <li
+            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
+              href="#Pledge">Pledge</a></li>
+        </ul>
+        <button class="cursor-pointer sm:hidden text-[#FF9933]">&#9776</button>
+      </nav>
+    </header>
+    <!-- Header ends here........... -->
+
+    <main class="h-[calc(100vh-80px)] overflow-y-scroll snap-y snap-mandatory">
+
+      <section id="Home"
+        class="snap-start h-[calc(100vh-80px)] hero grid sm:grid-cols-2 place-items-center">
+
+        <div class="textMSG text-center">
+          <h1 class="text-6xl font-bold">26 January 2026</h1>
+          <p class="mt-4 font-bold">
+            <q>
+              Celebrating the spirit of the Indian Constitution
+              and the pride of our nation.
+            </q>
+
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img class src="images/Hero.jpg" alt>
+        </div>
+
+      </section>
+
+      <section id="About"
+        class="snap-start h-[calc(100vh-80px)] text-center grid sm:grid-cols-2 sm:place-items-center bg-gradient-to-b from-[#FF9933] via-white to-[#138808]">
+        <div class="heading sm:col-span-2">
+          <h1 class="sm:text-6xl text-3xl font-bold ">About Republic Day</h1>
+        </div>
+        <div class="about-img sm:p-20 px-8">
+          <img src="images/about.png" alt>
+        </div>
+        <div class="about-text font-bold sm:text-xl">
+          <p><q>Republic Day is celebrated on 26 January every year
+              to commemorate the adoption of the Constitution of India
+              in 1950, making India a sovereign democratic republic.</q></p>
+        </div>
+      </section>
+
+      <section
+  id="Leaders"
+  class="snap-start min-h-[calc(100vh-80px)] flex flex-col justify-center
+         bg-white px-6">
+
+  <!-- Heading -->
+  <div class="text-center mb-10">
+    <h1 class="text-3xl sm:text-6xl font-bold">
+      National Leaders
+    </h1>
+    <p class="mt-4 font-bold">
+      Architects of India’s Democracy
+    </p>
+  </div>
+
+  <!-- Leaders Grid -->
+  <div
+    class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+    <!-- Leader 1 -->
+    <div
+      class="flex flex-col items-center p-6 rounded-xl shadow-lg
+             hover:scale-105 transition">
+      <img
+        src="images/ambedkar.png"
+        alt="Dr B R Ambedkar"
+        class="h-40 mb-4 rounded-full">
+      <h1 class="text-xl font-bold">Dr. B. R. Ambedkar</h1>
+      <p class="text-center mt-2 font-bold">
+        Father of the Indian Constitution
+      </p>
+    </div>
+
+    <!-- Leader 2 -->
+    <div
+      class="flex flex-col items-center p-6 rounded-xl shadow-lg
+             hover:scale-105 transition">
+      <img
+        src="images/gandhi.png"
+        alt="Mahatma Gandhi"
+        class="h-40 mb-4 rounded-full">
+      <h1 class="text-xl font-bold">Mahatma Gandhi</h1>
+      <p class="text-center mt-2 font-bold">
+        Leader of India’s Freedom Struggle
+      </p>
+    </div>
+
+    <!-- Leader 3 -->
+    <div
+      class="flex flex-col items-center p-6 rounded-xl shadow-lg
+             hover:scale-105 transition">
+      <img
+        src="images/bose.png"
+        alt="Subhas Chandra Bose"
+        class="h-40 mb-4 rounded-full">
+      <h1 class="text-xl font-bold">Subhas Chandra Bose</h1>
+      <p class="text-center mt-2 font-bold">
+        Symbol of Courage and Patriotism
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+      <section id="Pledge"
+        class="snap-start h-[calc(100vh-80px)] flex items-center justify-center 
+            bg-gradient-to-b from-[#FF9933] via-white to-[#138808]">
+
+        <form class="w-[90%] max-w-md p-8 rounded-2xl shadow-xl
+               bg-white/70 backdrop-blur-md text-[#000080]">
+
+          <h1 class="text-3xl font-bold text-center mb-6">
+            Republic Day Pledge
+          </h1>
+
+          <input type="text" placeholder="Your Name"
+            class="w-full p-3 border-2 border-[#000080] rounded-lg
+             focus:outline-none focus:ring-2 focus:ring-[#FF9933]" />
+          <textarea class="w-full mt-4 p-3 border-2 border-[#000080] rounded-lg
+         focus:outline-none focus:ring-2 focus:ring-[#FF9933]" rows="6">
+I pledge to uphold the values of the Constitution of India
+and contribute positively to my nation.
+</textarea>
+
+          <button class="w-full mt-6 py-3 rounded-lg font-bold text-white
+             bg-gradient-to-r from-[#FF9933] to-[#138808] cursor-pointer">
+            Submit
+          </button>
+
+        </form>
+
+      </section>
+
+    </main>
+  </body>
+
+</html>
