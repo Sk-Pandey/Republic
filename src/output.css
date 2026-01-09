@@ -7,10 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-green-500: oklch(72.3% 0.219 149.579);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
@@ -201,9 +197,6 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -224,12 +217,6 @@
   }
   .table {
     display: table;
-  }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
-  .h-12 {
-    height: calc(var(--spacing) * 12);
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
@@ -266,12 +253,6 @@
   }
   .resize {
     resize: both;
-  }
-  .snap-y {
-    scroll-snap-type: y var(--tw-scroll-snap-strictness);
-  }
-  .snap-mandatory {
-    --tw-scroll-snap-strictness: mandatory;
   }
   .snap-start {
     scroll-snap-align: start;
@@ -487,19 +468,24 @@
       grid-column: span 2 / span 2;
     }
   }
-  .sm\:mb-4 {
-    @media (width >= 40rem) {
-      margin-bottom: calc(var(--spacing) * 4);
-    }
-  }
   .sm\:hidden {
     @media (width >= 40rem) {
       display: none;
     }
   }
-  .sm\:h-40 {
+  .sm\:snap-y {
     @media (width >= 40rem) {
-      height: calc(var(--spacing) * 40);
+      scroll-snap-type: y var(--tw-scroll-snap-strictness);
+    }
+  }
+  .sm\:snap-mandatory {
+    @media (width >= 40rem) {
+      --tw-scroll-snap-strictness: mandatory;
+    }
+  }
+  .sm\:snap-start {
+    @media (width >= 40rem) {
+      scroll-snap-align: start;
     }
   }
   .sm\:grid-cols-2 {
@@ -565,11 +551,6 @@
       line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
-}
-@property --tw-scroll-snap-strictness {
-  syntax: "*";
-  inherits: false;
-  initial-value: proximity;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -743,10 +724,14 @@
   inherits: false;
   initial-value: 1;
 }
+@property --tw-scroll-snap-strictness {
+  syntax: "*";
+  inherits: false;
+  initial-value: proximity;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-scroll-snap-strictness: proximity;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
@@ -785,6 +770,7 @@
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-scroll-snap-strictness: proximity;
     }
   }
 }
