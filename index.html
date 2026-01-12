@@ -1,205 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Republic Day</title>
     <link href="./src/output.css" rel="stylesheet" />
+
     <style>
-    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap");
 
-    * {
-      scroll-behavior: smooth;
-    }
+      * {
+        scroll-behavior: smooth;
+      }
 
-    h1 {
-      font-family: "Playfair Display", serif;
-    }
+      h1,
+      p {
+        font-family: "Playfair Display", serif;
+      }
 
-    p {
-      font-family: "Playfair Display", serif;
-    }
-    input,textarea{
-      font-weight: 600;
-      font-variant: small-caps;
-    }
-    
-  </style>
+      input,
+      textarea {
+        font-weight: 600;
+        font-variant: small-caps;
+      }
+    </style>
   </head>
 
-  <!-- 
-  Saffron: #FF9933 (highlights, buttons)
-
-White: #FFFFFF (background)
-
-Green: #138808 (icons, accents)
-
-Navy Blue: #000080 (Ashoka Chakra, headings)
-  -->
-
   <body class="text-[#000080]">
-    <!-- Header Start here...... -->
+    <!-- HEADER -->
     <header
-      class="h-20 flex justify-around items-center shadow-md sticky top-0 bg-white">
-      <div class="logo lg:w-[50%] flex items-center md:gap-6 gap-2 sm:pl-6">
-        <img class="h-16 md:h-20" src="images/logo.png" alt="IN-flag" />
-        <h1 class="text-xl lg:text-2xl font-bold">HAPPY REPUBLIC DAY</h1>
+      class="h-20 flex justify-around items-center shadow-md sticky top-0 bg-white z-40"
+    >
+      <div class="flex items-center gap-4">
+        <img src="images/logo.png" class="h-16" />
+        <h1 class="text-xl font-bold">HAPPY REPUBLIC DAY</h1>
       </div>
 
-      <nav class="text-xl font-bold lg:w-[50%]">
-        <ul class="hidden md:flex justify-around ">
-          <li
-            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
-              href="#Home">Home</a></li>
-          <li
-            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
-              href="#About">About</a></li>
-          <li
-            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
-              href="#Leaders">Leaders</a>
-          </li>
-          <li
-            class="text-[#FF9933] hover:bg-[#68e35d] hover:text-white p-1 px-2 rounded-lg"><a
-              href="#Pledge">Pledge</a></li>
-        </ul>
-        <button class="cursor-pointer sm:hidden text-[#FF9933]">&#9776</button>
-      </nav>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-8 font-bold text-xl">
+        <li>
+          <a href="#Home" class="text-[#FF9933] hover:text-green-600">Home</a>
+        </li>
+        <li>
+          <a href="#About" class="text-[#FF9933] hover:text-green-600">About</a>
+        </li>
+        <li>
+          <a href="#Leaders" class="text-[#FF9933] hover:text-green-600"
+            >Leaders</a
+          >
+        </li>
+        <li>
+          <a href="#Pledge" class="text-[#FF9933] hover:text-green-600"
+            >Pledge</a
+          >
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button id="openMenu" class="md:hidden text-3xl text-[#FF9933]">
+        &#9776;
+      </button>
     </header>
-    <!-- Header ends here........... -->
 
-    <main class="h-[calc(100vh-80px)] overflow-y-scroll sm:snap-y sm:snap-mandatory">
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-[75%] bg-gradient-to-b from-[#FF9933] via-white to-[#138808] shadow-2xl z-50 transform translate-x-full transition-transform duration-300 p-6"
+    >
+      <div class="flex justify-end">
+        <button id="closeMenu" class="text-4xl">&times;</button>
+      </div>
 
-      <section id="Home"
-        class="sm:snap-start h-[calc(100vh-80px)] hero grid sm:grid-cols-2 place-items-center">
+      <ul class="flex flex-col gap-8 mt-10 text-xl font-bold text-[#000080]">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Leaders">Leaders</a></li>
+        <li><a href="#Pledge">Pledge</a></li>
+      </ul>
+    </div>
 
-        <div class="textMSG text-center">
-          <h1 class="text-6xl font-bold">26 January 2026</h1>
+    <!-- MAIN -->
+    <main
+      class="h-[calc(100vh-80px)] overflow-y-scroll sm:snap-y sm:snap-mandatory"
+    >
+      <!-- HOME -->
+      <section
+        id="Home"
+        class="h-full grid md:grid-cols-2 place-items-center p-10"
+      >
+        <div class="text-center">
+          <h1 class="text-5xl font-bold">26 January 2026</h1>
           <p class="mt-4 font-bold">
-            <q>
-              Celebrating the spirit of the Indian Constitution
-              and the pride of our nation.
-            </q>
-
+            Celebrating the spirit of the Constitution
           </p>
         </div>
-
-        <div class="hero-image">
-          <img class src="images/Hero.jpg" alt>
-        </div>
-
+        <img src="images/Hero.jpg" class="max-h-96" />
       </section>
 
-      <section id="About"
-        class="sm:snap-start h-[calc(100vh-80px)] text-center grid sm:grid-cols-2 sm:place-items-center bg-gradient-to-b from-[#FF9933] via-white to-[#138808]">
-        <div class="heading sm:col-span-2">
-          <h1 class="sm:text-6xl text-3xl font-bold ">About Republic Day</h1>
-        </div>
-        <div class="about-img sm:p-20 px-8">
-          <img src="images/about.png" alt>
-        </div>
-        <div class="about-text font-bold sm:text-xl">
-          <p><q>Republic Day is celebrated on 26 January every year
-              to commemorate the adoption of the Constitution of India
-              in 1950, making India a sovereign democratic republic.</q></p>
-        </div>
-      </section>
-
+      <!-- ABOUT -->
       <section
-  id="Leaders"
-  class="sm:snap-start min-h-[calc(100vh-80px)] flex flex-col justify-center
-         bg-white px-6">
+        id="About"
+        class="h-full grid md:grid-cols-2 place-items-center bg-gradient-to-b from-[#FF9933] via-white to-[#138808] p-10"
+      >
+        <img src="images/about.png" class="max-h-96" />
+        <p class="font-bold text-xl text-center">
+          Republic Day celebrates the adoption of the Indian Constitution in
+          1950.
+        </p>
+      </section>
 
-  <!-- Heading -->
-  <div class="text-center mb-10">
-    <h1 class="text-3xl sm:text-6xl font-bold">
-      National Leaders
-    </h1>
-    <p class="mt-4 font-bold">
-      Architects of India’s Democracy
-    </p>
-  </div>
+      <!-- LEADERS -->
+      <section id="Leaders" class="min-h-full bg-white p-10">
+        <h1 class="text-4xl text-center font-bold mb-10">National Leaders</h1>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="shadow-lg p-6 text-center rounded-xl">
+            <img
+              src="images/ambedkar.png"
+              class="h-40 mx-auto mb-4 rounded-full"
+            />
+            <h1>Dr. B. R. Ambedkar</h1>
+          </div>
 
-  <!-- Leaders Grid -->
-  <div
-    class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="shadow-lg p-6 text-center rounded-xl">
+            <img
+              src="images/gandhi.png"
+              class="h-40 mx-auto mb-4 rounded-full"
+            />
+            <h1>Mahatma Gandhi</h1>
+          </div>
 
-    <!-- Leader 1 -->
-    <div
-      class="flex flex-col items-center p-6 rounded-xl shadow-lg
-             hover:scale-105 transition">
-      <img
-        src="images/ambedkar.png"
-        alt="Dr B R Ambedkar"
-        class="h-40 mb-4 rounded-full">
-      <h1 class="text-xl font-bold">Dr. B. R. Ambedkar</h1>
-      <p class="text-center mt-2 font-bold">
-        Father of the Indian Constitution
-      </p>
-    </div>
+          <div class="shadow-lg p-6 text-center rounded-xl">
+            <img src="images/bose.png" class="h-40 mx-auto mb-4 rounded-full" />
+            <h1>Subhas Chandra Bose</h1>
+          </div>
+        </div>
+      </section>
 
-    <!-- Leader 2 -->
-    <div
-      class="flex flex-col items-center p-6 rounded-xl shadow-lg
-             hover:scale-105 transition">
-      <img
-        src="images/gandhi.png"
-        alt="Mahatma Gandhi"
-        class="h-40 mb-4 rounded-full">
-      <h1 class="text-xl font-bold">Mahatma Gandhi</h1>
-      <p class="text-center mt-2 font-bold">
-        Leader of India’s Freedom Struggle
-      </p>
-    </div>
-
-    <!-- Leader 3 -->
-    <div
-      class="flex flex-col items-center p-6 rounded-xl shadow-lg
-             hover:scale-105 transition">
-      <img
-        src="images/bose.png"
-        alt="Subhas Chandra Bose"
-        class="h-40 mb-4 rounded-full">
-      <h1 class="text-xl font-bold">Subhas Chandra Bose</h1>
-      <p class="text-center mt-2 font-bold">
-        Symbol of Courage and Patriotism
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-      <section id="Pledge"
-        class="sm:snap-start h-[calc(100vh-80px)] flex items-center justify-center 
-            bg-gradient-to-b from-[#FF9933] via-white to-[#138808]">
-
-        <form class="w-[90%] max-w-md p-8 rounded-2xl shadow-xl
-               bg-white/70 backdrop-blur-md text-[#000080]">
-
-          <h1 class="text-3xl font-bold text-center mb-6">
+      <!-- PLEDGE -->
+      <section
+        id="Pledge"
+        class="h-full flex justify-center items-center bg-gradient-to-b from-[#FF9933] via-white to-[#138808]"
+      >
+        <form class="bg-white p-8 rounded-xl shadow-xl w-[90%] max-w-md">
+          <h1 class="text-2xl text-center font-bold mb-4">
             Republic Day Pledge
           </h1>
-
-          <input type="text" placeholder="Your Name"
-            class="w-full p-3 border-2 border-[#000080] rounded-lg
-             focus:outline-none focus:ring-2 focus:ring-[#FF9933]" />
-          <textarea class="w-full mt-4 p-3 border-2 border-[#000080] rounded-lg
-         focus:outline-none focus:ring-2 focus:ring-[#FF9933]" rows="6">
-I pledge to uphold the values of the Constitution of India
-and contribute positively to my nation.
-</textarea>
-
-          <button class="w-full mt-6 py-3 rounded-lg font-bold text-white
-             bg-gradient-to-r from-[#FF9933] to-[#138808] cursor-pointer">
+          <input class="w-full p-3 border mb-4" placeholder="Your Name" />
+          <textarea class="w-full p-3 border" rows="5">
+I pledge to uphold the Constitution of India.</textarea
+          >
+          <button
+            class="w-full bg-gradient-to-r from-[#FF9933] to-[#138808] text-white py-3 mt-4 rounded-lg"
+          >
             Submit
           </button>
-
         </form>
-
       </section>
-
     </main>
-  </body>
 
+    <!-- SCRIPT -->
+    <script>
+      const openBtn = document.getElementById("openMenu");
+      const closeBtn = document.getElementById("closeMenu");
+      const menu = document.getElementById("mobileMenu");
+
+      openBtn.addEventListener("click", () => {
+        menu.classList.remove("translate-x-full");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.add("translate-x-full");
+      });
+
+      document.querySelectorAll("#mobileMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("translate-x-full");
+        });
+      });
+    </script>
+  </body>
 </html>
